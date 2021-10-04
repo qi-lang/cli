@@ -3,13 +3,6 @@
 version = 3
 
 [[package]]
-name = "demo_ignore"
-version = "0.1.0"
-dependencies = [
- "qi_core",
-]
-
-[[package]]
 name = "itoa"
 version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -45,6 +38,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b9f5105d4fdaab20335ca9565e106a5d9b82b6219b5ba735731124ac6711d23d"
 dependencies = [
  "unicode-xid",
+]
+
+[[package]]
+name = "qi_cli"
+version = "0.1.0"
+dependencies = [
+ "qi_core",
 ]
 
 [[package]]
