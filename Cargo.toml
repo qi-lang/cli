@@ -7,3 +7,4 @@ edition = "2018"
 
 [dependencies]
 qi_core = { path = "core" }
+qi_interactive = { path = "interactive" }

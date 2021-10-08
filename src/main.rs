@@ -4,23 +4,9 @@
  * License text available at https://opensource.org/licenses/MIT
  */
 
-use qi_core;
+use qi_core::parsers;
+use qi_interactive;
 
 fn main() {
-    // let earlier = std::time::Instant::now();
-    // let result =
-    //     qi_core::parse_from_file("./playground/other.qi", qi_core::parsers::definition::parse);
-    // let later = std::time::Instant::elapsed(&earlier);
-
-    // println!("Time to complete: {:#?}", later);
-    // println!("Result: {:#?}", result);
-
-    // println!("--------------------------------");
-
-    let earlier = std::time::Instant::now();
-    let result = qi_core::parse_from_file("./playground/other.qi", qi_core::parsers::module::parse);
-    let later = std::time::Instant::elapsed(&earlier);
-
-    println!("Time to complete: {:#?}", later);
-    println!("Result: {:#?}", result);
+    qi_interactive::init(parsers::module::parse);
 }

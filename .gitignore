@@ -120,3 +120,4 @@ Cargo.lock
 # custom
 
 core/
+interactive/
