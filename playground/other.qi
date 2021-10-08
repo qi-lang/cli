@@ -1,1 +1,3 @@
-%{msg: "hello"}
+def is_true(a) do
+true 
+end
