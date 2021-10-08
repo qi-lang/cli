@@ -7,16 +7,10 @@
 use qi_core;
 
 fn main() {
-    println!(
-        "{:?}",
-        qi_core::parse_from_str("[]", qi_core::parsers::list::parse)
-    );
-    println!(
-        "{:?}",
-        qi_core::parse_from_str("[true, false]", qi_core::parsers::list::parse)
-    );
-    println!(
-        "{:?}",
-        qi_core::parse_from_str("[true, false, true]", qi_core::parsers::list::parse)
-    );
+    let earlier = std::time::Instant::now();
+    let result = qi_core::parse_from_file("./playground/other.qi", qi_core::parsers::map::parse);
+    let later = std::time::Instant::elapsed(&earlier);
+
+    println!("Time to complete: {:#?}", later);
+    println!("Result: {:#?}", result);
 }
